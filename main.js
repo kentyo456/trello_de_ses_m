@@ -28,11 +28,12 @@ function subMenuTablo1(){
 }
 
 function creatediv (){
-let div = document.createElement('card');
-div.classList.add('test');
-let text = document.createTextNode('Test');
+let div = document.createElement('div');
+div.classList.add('col-sm');
+let text = document.createTextNode('CARTE');
 div.appendChild(text);
-document.body.appendChild(div)
-var currentDiv = document.getElementById('titre');
-  document.body.insertBefore(card, currentDiv);
+
+let container = document.getElementById("row1");
+let child = document.getElementById("firstcol");
+container.insertBefore(div, child)
 }
