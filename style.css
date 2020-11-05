@@ -41,21 +41,23 @@ a {
     left: 0;
     right: 0;
     overflow: hidden;
-    font-family: 'Raleway', Arial, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 30px;
     z-index: 1;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.486);
 }
 
 .menu .containernav {
-    margin: 200px 0 0 0;
+    margin: 50px 0 0 0;
+    width: 100%;
 }
 
 .menu .containernav ul {
+    width: 100%;
     padding: 0;
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2vw;
 }
 
 .menu .containernav li {
@@ -78,7 +80,7 @@ a {
 }
 
 .menu .containernav li:hover {
-    background-color: rgb(206, 7, 7);
+    background-color: rgb(143, 38, 38);
     opacity: 1;
 }
 
@@ -112,8 +114,8 @@ a {
 }
 
 .submenu li {
-    background-color: rgb(190, 13, 13);
-    font-size: 15px;
+    background-color: rgb(155, 26, 26);
+    font-size: 1vw;
     color: white;
 }
 
@@ -128,13 +130,25 @@ a {
 }
 
 .titre {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    text-align: left;
     position: relative;
+    width: 97%;
+}
+
+#tablo1 {
+    text-align: left;
+    font-size: 40px;
+    border: none;
+    color: rgba(255, 255, 255, 0.774);
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+}
+
+#tablo1::placeholder {
+    opacity: 0.6;
 }
 
 .row {
@@ -155,7 +169,12 @@ a {
 
 #row1::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.267);
+    background: rgba(197, 197, 197, 0.322);
+}
+
+#row1::-webkit-scrollbar-thumb:hover {
+    border-radius: 10px;
+    background: rgba(197, 197, 197, 0.747);
 }
 
 #firstcol {
@@ -163,6 +182,7 @@ a {
     border: 0;
     border-radius: 10px;
     box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0);
+    margin: 10px;
 }
 
 .createbutton {
@@ -170,7 +190,8 @@ a {
     width: 80px;
     opacity: 0.2;
     transition-duration: 0.4s;
-    background-color: rgb(219, 219, 219);
+    background-color: rgba(219, 219, 219, 0.089);
+    cursor: pointer;
 }
 
 .createbutton:hover {
@@ -184,6 +205,11 @@ a {
 }
 
 .col-sm {
+    max-width: 350px !important;
+    min-height: 770px;
+}
+
+.cardclass {
     background-color: rgb(255, 255, 255);
     max-width: 300px !important;
     min-width: 300px !important;
@@ -195,18 +221,18 @@ a {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    overflow-y: auto;
-    padding: 10px 8px 0px 8px !important;
+    padding: 10px 8px 10px 8px !important;
     box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.692);
     opacity: 0.7;
     transition: 0.3s;
+    overflow-y: auto;
 }
 
-.col-sm:hover {
+.cardclass:hover {
     opacity: 0.9;
 }
 
-.col-sm::-webkit-scrollbar {
+.cardclass::-webkit-scrollbar {
     display: none;
 }
 
@@ -241,18 +267,15 @@ a {
     width: 25px;
     height: 25px;
     top: 0px;
-    right: 0px;
+    right: 15px;
     transition: 0.2s;
     font-size: 12px;
     opacity: 0.5;
+    z-index: 999;
 }
 
 .deletebutton:hover {
     opacity: 0.8;
-}
-
-.deletebutton:active {
-    transform: translateY(1px);
 }
 
 .containerbtnrmv {
@@ -281,26 +304,37 @@ a {
 
 .todobtn {
     border-radius: 5px;
-    background-color: turquoise;
+    background-color: rgb(58, 187, 174);
     font-size: 12px;
     margin-bottom: 10px;
-    padding: 2px 8px;
+    padding: 2px 12px;
     opacity: 0.5;
     transition: 0.2s;
     text-transform: uppercase;
+    color: white;
 }
 
 .todobtn:hover {
     opacity: 1;
 }
 
+.todobtn:active {
+    transform: translateY(1px);
+}
+
 .todo {
     background-color: rgb(23, 177, 23);
     min-height: 40px;
     margin-bottom: 12px;
-    border-radius: 5px;
+    border-radius: 8px;
     border-top-right-radius: 0px;
     box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.692);
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.todo:hover {
+    opacity: 1;
 }
 
 .titretodo {
@@ -311,6 +345,8 @@ a {
     width: 90%;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    resize: none;
+    overflow: hidden;
 }
 
 .titretodo::placeholder {
@@ -324,6 +360,8 @@ a {
 .canva {
     width: 100%;
     background-color: rgba(255, 255, 0, 0);
+    overflow-y: auto;
+    min-height: 20px;
 }
 
 .containerbtncolor {
@@ -352,4 +390,13 @@ a {
 
 .btnrouge {
     background-color: rgb(175, 37, 37);
+}
+
+@media screen and (max-width: 1200px) {
+    .menu {
+        display: none;
+    }
+    .containerD {
+        width: 100%;
+    }
 }
